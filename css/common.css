@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* 这个a是对整个文档来进行默认配置的*/
+a{
+    text-decoration: none;   
+    color: #000; 
+}
+body{
+    background-image: url(../images/主页主图.jpg);
+    
+}
+
+#wrapper{
+    margin:20px auto;
+    width: 1400px; /* 这是顶部框左右宽度 1400像素*/
+    border:1px solid #3399cc;
+    background-color:rgba(255,255,255, 0.5);
+}
+
+#bodyer{
+    clear: left;
+}
+#wrapper #header .hd_left{
+    float: left;
+    margin: 0px; /* 这是调整元素间距*/
+    background-color: rgba(255,255,255, 0); 
+    height:50px;
+}
+
+#wrapper #header .hd_right{
+    float: right;
+    text-decoration: none;
+    background-color: skyblue;
+    font-size: 18px; 
+    height:45px ;
+    margin-top: 16px;
+   
+}
+
+
+.hd_right a{ 
+    margin: 14px;
+    color: rgb(255, 255, 255);
+    text-decoration: none; /*取消选项下划线*/
+    margin-right: 16px;
+}
+
+.hd_right a:hover{
+    color: rgba(255, 255, 255, 0.856);
+} 
+
+#wrapper #header{
+    overflow: auto; /*可将左右大小不一致的层 自动调换为一致 层高与 right height有关*/
+}

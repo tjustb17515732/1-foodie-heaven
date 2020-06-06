@@ -4,16 +4,23 @@ a{
     text-decoration: none;   
     color: #000; 
 }
-body{
-    background-image: url(../images/主页主图.jpg);
-    
-}
 
-#wrapper{
+*{/* 清除界面所有脏边框 div换行时产生的空格*/
+    margin: 0px;
+    padding: 0px;
+}
+body{
+   background-image: url(../images/主页主图.jpg); 
+}
+ 
+#wrapper{ /*浮于背景之上的1400px宽的界面*/
+    left: 15%;
+    width: 1400px;
     margin:20px auto;
-    width: 1400px; /* 这是顶部框左右宽度 1400像素*/
-    border:1px solid #3399cc;
-    background-color:rgba(255,255,255, 0.5);
+     /* 这是顶部框左右宽度 1400像素*/
+    border:2px solid #33cc3b98;
+    background-color:none;
+    position: absolute; z-index: 1
 }
 
 #bodyer{
@@ -22,32 +29,46 @@ body{
 #wrapper #header .hd_left{
     float: left;
     margin: 0px; /* 这是调整元素间距*/
-    background-color: rgba(255,255,255, 0); 
+    border:2px solid red;
     height:50px;
+    position: absolute; z-index: 100
+    
 }
 
 #wrapper #header .hd_right{
     float: right;
+    left: 72%;
     text-decoration: none;
-    background-color: skyblue;
+    background-color:none;
+    border:2px solid #dbff0e;
     font-size: 18px; 
     height:45px ;
-    margin-top: 16px;
-   
+    margin-top: 5px;
+   /* position: absolute; z-index: 99*/
 }
 
 
 .hd_right a{ 
+    float: left;
     margin: 14px;
-    color: rgb(255, 255, 255);
+    color: rgb(248, 248, 248);
     text-decoration: none; /*取消选项下划线*/
     margin-right: 16px;
+    background-color: none;
+    text-shadow:0 0 8px rgba(48, 48, 48, 0.904);
 }
 
-.hd_right a:hover{
+.hd_right a:hover{ /*选中变色*/
     color: rgba(255, 255, 255, 0.856);
 } 
 
 #wrapper #header{
     overflow: auto; /*可将左右大小不一致的层 自动调换为一致 层高与 right height有关*/
+}
+
+#pics{
+    width: 1920px;
+    height: 700px;
+    background-color: skyblue;
+    
 }

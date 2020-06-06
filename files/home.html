@@ -5,32 +5,140 @@
 <!-- <base href="http://www.foodie heaven.com"/>
     <base target="_blank"/> -->
 <title>美食天堂</title>
+<script src="/js/main.js" type="text/javascript"> </script>
 <link rel="stylesheet" type="text/css" href="../css/common.css">
-<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
 
 </head>
 
 <body>
-<div id="wrapper">
-    <div id="header">
-        <div class="hd_left" >
-            <a href="https://www.beitaichufang.com/"><img src="../images/55555.png" width="100px" /></a>
-        </div>
-        <div class="hd_right" >
-
-            <a href="http://www.beitaichufang.com/index">首页</a>
-            <a href="http://www.beitaichufang.com/menu">食谱</a>
-            <a href="http://www.xiachufang.com/category/">分类</a>
-            <a href="http://www.beitaichufang.com/index">注册</a>
-            <a href="http://www.beitaichufang.com/index">登录</a>
-            <a href="http://www.beitaichufang.com/index"><img src="../images/搜索图标.jpg"></a>
-
-    </div>
-    <div id="bodyer">fffff</div>
-</div>
     
+    <div>
+        <div id="wrapper">
+            <div id="header">
+                <div class="hd_left" >
+                    <a href="https://www.beitaichufang.com/"><img src="../images/logo1.png" width="100px" /></a>
+                </div>
+
+                <div class="hd_right" >
+                    <a href="http://www.beitaichufang.com/index">首页</a>
+                    <a href="http://www.beitaichufang.com/menu">食谱</a>
+                    <a href="http://www.xiachufang.com/category/">分类</a>
+                    <a href="http://www.beitaichufang.com/index">注册</a>
+                    <a href="http://www.beitaichufang.com/index">登录</a>
+                    <a href="http://www.beitaichufang.com/index"><img src="../images/搜索.jpg" /></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="block">
+            <div class="box_big ">
+                <div class="box"><a href="https://jingyan.baidu.com/article/c74d600030a89a4f6a595d96.html"><img src="../images/图片滚动2.jpg"></a></div>
+                <div class="box"><a href="https://jingyan.baidu.com/article/c74d600030a89a4f6a595d96.html"><img src="../images/图片滚动1.jpg"></a></div>
+                <div class="box"><a href="https://jingyan.baidu.com/article/c74d600030a89a4f6a595d96.html"><img src="../images/图片滚动1.jpg"></a></div>
+                <div class="box"><img src="img/8.jpg" alt=""/></div>
+                <div class="box"><img src="img/9.jpg" alt=""/></div>
+                <div class="box"><img src="img/7.jpg" alt=""/></div>
+            </div>
+            <div class="spot">
+                <div class="spot_list">1</div>
+                <div class="spot_list">2</div>
+                <div class="spot_list">3</div>
+                <!--<div class="spot_list">4</div>
+                <div class="spot_list">5</div>-->
+            </div>
+            <div class="btn">
+                <div class="left_btn"><span><p><</p></span></div>
+                <div class="right_btn"><span> <p>></p> </span></div>
+            </div>
+        </div>
+        
+    </div>
 
 
-</body>
 
+   
+    
+        
+    <div id="bodyer">
+       afafafafaf
+        <div> 
+         
+        </div>
+    </div>
+
+    <script> /*--滚动显示*/
+    var box = document.getElementsByClassName("box_big")[0];
+    var spot = document.getElementsByClassName("spot_list");
+    var block = document.getElementsByClassName("block")[0];
+    var left_btn = document.getElementsByClassName("left_btn")[0];
+    var right_btn = document.getElementsByClassName("right_btn")[0];
+    var time = null;
+    spot[0].style.background = "rgba(91,91,91,0.8)";
+    var count = 0;
+    showtime();
+    //鼠标进入计时器停止
+    block.onmouseenter = function () {
+        clearInterval(time);
+    };
+    //鼠标出来计时器打开
+    block.onmouseleave = function () {
+        showtime();
+    };
+    //点的事件
+    for (var i = 0; i < spot.length; i++) {
+        spot[i].index = i;
+        spot[i].onmouseenter = function () {
+            spot[count].style.background = "rgba(255, 255, 255, 0.3)";
+            this.style.background = "rgba(91,91,91,0.8)";
+            count = this.index;
+            box.style.marginLeft = (count * -1920) + "px";
+        }
+
+    }
+    //图片左边划
+    left_btn.onclick = function () {
+        spot[count].style.backgroundColor = "rgba(255,255,255,0.3)";
+        count--;
+        if (count < 0) {
+            box.className = "box_big";
+            count = box.children.length - 4;
+            box.style.marginLeft = "-5760px";
+        }
+        setTimeout(function () {
+            box.className = "box_big nav";
+            box.style.marginLeft = (-1920 * count) + "px";
+            spot[count].style.backgroundColor = "rgba(91,91,91,0.8)";
+        }, 1);
+        
+    };
+    //图片右边划
+    right_btn.onclick = function () {
+        mate();
+    };
+    //计时器
+    function showtime() {
+        time = setInterval(function () {
+            mate();
+        }, 2000);
+    }
+    //正常滚动
+    function mate() {
+        box.className = "box_big nav";
+        spot[count].style.background = "rgba(255, 255, 255, 0.3)";
+        count++;
+        spot[count > box.children.length - 4 ? 0 : count].style.background = "rgba(91,91,91,0.8)";
+        box.style.marginLeft = (count * -1920) + "px";
+        setTimeout(function () {
+            if (count > box.children.length - 4) {
+                count = 0;
+                box.className = "box_big";
+                box.style.marginLeft = "0px"
+            }
+            }, 2000)
+    }     
+
+</script>
+
+	</body>
 </html>

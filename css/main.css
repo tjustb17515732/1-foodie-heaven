@@ -92,5 +92,55 @@ img {
 
 
 #bodyer{
-    background-color:red ;
+    border:2px solid rgb(229, 255, 0) ;
+    margin: auto;
+    width: 1400px;
+    overflow: auto;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
 }
+
+
+#bodyer #bd_line1{
+    border:2px solid sandybrown ；
+    
+    
+}
+
+#bd_line1 .bd_line1_left{
+    border:2px solid rgba(201, 201, 201,0.5); border-style:none solid;
+    background-color:none;
+    margin-left: 22px;
+    float: left;
+    height: 1000px;
+    width: 110px;
+   
+}
+
+#bd_line1 .bd_right{
+    border:2px solid rgb(255, 72, 0) ;
+    float: right;
+    height: 1000px;
+    width: 1250px;
+    /*font-size: 3a0px;*/
+}
+
+#bd_line1 .bd_right .bd_right_right {
+    float: right;
+    height: 650px;
+    width: 300px;
+    border:2px solid rgb(255, 72, 0) ;
+    position: relative;
+    z-index: 5;
+}
+
+#bd_line1 .bd_right .bd_right_line1 {
+    width: 900px;
+    height: 650px;
+    position: absolute;
+    z-index: 5;
+    border:2px solid rgb(255, 72, 0) ;
+    margin-left: 30px;
+   
+}
+

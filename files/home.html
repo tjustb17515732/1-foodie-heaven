@@ -103,21 +103,131 @@
 
                 <div class = "bd_right" >
                    <div class="bd_right_line1">
-                       <h2>美食新秀</h2>
+                       <b><h2>美食新秀</h2></b>
+                       <style>
+                        *{
+                            margin: 0;
+                            padding:0;
+                            list-style: none;
+                        }
+                        .big{
+                            width: 943px;
+                            height:550px;
+                            
+                            margin:20px  auto;
+                            background-color: aqua;
+                        }
+                        .big ul{
+                            width: 800x;
+                            height: 250px;
+                            border: 1px solid black;
+                            position: relative;
+                            overflow: hidden;
+                        }
+                        .big li{
+                            width: 800px;
+                            height: 250px;
+                            line-height: 100px ;
+                            text-align: center;
+                        }
+                        .big .color1{
+                            background: rgb(166, 197, 209);
+                            position: absolute;
+                
+                        }
+                        .big .color2{
+                            background: yellow;
+                            position: absolute;
+                
+                        }
+                        .big .color3{
+                            background: pink;
+                            position: absolute;
+                
+                        }
+                        .big .color4{
+                            background: green;
+                            position: absolute;
+                
+                        }
+                        .big .input1{
+                            width: 30px;
+                            height: 30px;
+                            margin: 10px ;
+                            position: absolute;
+                            top:25px ;
+                            left:783px;
+                        }
+                        .big .input2{ 
+                            width: 30px;
+                            height: 30px;
+                            margin: 10px ;
+                            position: absolute;
+                            top:25px ;
+                            left:823px;
+                            }
+                    </style>
+                        <div class="big">
+                        <ul>
+                        <li class="color1" style="top:0;"> <img src="/images/主页主图.jpg" alt=""></li>
+                        <li class="color2" style="top:250px;"><img src="/images/图片滚动1.jpg" alt=""></li>
+                        <li class="color3" style="top:500px;"><img src="/images/主页主图.jpg" alt=""></li>
+                        <li class="color4" style=" top:-250px;"><img src="/images/图片滚动1.jpg" alt=""></li>
+                        </ul>
+                        <input class="input1" type="image"  src="/images/搜索.jpg">
+                        <input class="input2" type="image"  src="/images/搜索.jpg">
+                        </div>
+                         <script>
+                        window.onload=function () {
+                            var oIpt1=document.getElementsByTagName("input")[0];
+                            var oIpt2=document.getElementsByTagName("input")[1];
+                            var allColor=document.getElementsByTagName("li");
+                            oIpt2.addEventListener("click",function () {
+                            for(var i=0;i<allColor.length;i++){
+                                allColor[i].style.top=parseFloat(allColor[i].style.top)-250+"px";
+                                allColor[i].style.transition=1+"s"
+                                        if(allColor[i].style.top==-750+"px"){
+                                            allColor[i].style.top=250+"px"
+                                            allColor[i].style.transition=0+"s"
+                                        }
+                            }
+                            },false)
+                            oIpt1.addEventListener("click",function () {
+                                for(var i=0;i<allColor.length;i++){
+                                    allColor[i].style.top=parseFloat(allColor[i].style.top)+250+"px";
+                                    allColor[i].style.transition=1+"s"
+                                    if (allColor[i].style.top==1000+"px"){
+                                        allColor[i].style.top=0+"px"
+                                        allColor[i].style.transition=0+"s"
+                                    }
+                                }
+                            },false)
+                        }
+                        </script>
+                        <!--<div class="bd_right_line2">
+                           <a href="http://www.xiachufang.com/recipe/104086274/"><img src="/images/手工肉丸.jpg" alt=""><p>手工肉丸炖素三宝</p></a>
+                        </div>-->
+                       
                    </div>
-                   
+                    
                    <div class="bd_right_right">
                        APP 推广
+                       
                    </div>
-                </div>
+                   
+                   <div class="bd_right_line2">
+                          515
+                   </div>
+
+
+                
             </div>
             
         </div> 
     </div>
 
-   
-         
-        </div> 
+    
+        <div> 
         <!--地址CSS
         <address>
             <strong>Twitter, Inc.</strong><br>

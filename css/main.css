@@ -5,7 +5,7 @@
 }
 
 .block {
-    width: 1920px;
+    width: 1903px;
     height: 700px;
     border: 1px solid black;
     margin: 0px auto;
@@ -98,49 +98,66 @@ img {
     overflow: auto;
     position: relative;
     background-color: rgb(255, 255, 255);
+    
 }
 
 
-#bodyer #bd_line1{
+#bodyer .bd_line1{
     border:2px solid sandybrown 
 }
 
+
+#bodyer .bd_line1.zuo{
+    position: relative;
+}
 #bd_line1 .bd_line1_left{
     border:2px solid rgba(201, 201, 201,0.5); border-style:none solid;
     background-color:fuchsia;
     margin-left: 15px;
     float: left;
-    height: 1000px;
+    height: 800px;
     width: 110px;
-    position: relative;
+    
    
 }
 
+.bd_line1_left:hover {
+    opacity:0.5;
+   }
+
+#bd_line1 .bd_line1_left .zuo
+{
+    float: left;
+}
+
 #bd_line1 .bd_right{
+    
     border:2px solid rgb(0, 174, 255) ;
-    float: right;
+    margin:0;
     height: 1000px;
-    width: 1260px;
+    width: 1245px;
     position: relative;
-    left: 20px;
+    left: 150px;
     /*font-size: 3a0px;*/
 }
 
 #bd_line1 .bd_right .bd_right_right {
     float: right;
     height: 650px;
-    width: 300px;
+    width: 250px;
     border:2px solid rgb(255, 72, 0) ;
     position: relative;
-    z-index: 8;
+    z-index: 5;
+   
 }
 
 #bd_line1 .bd_right .bd_right_line1 {
-    width: 950px;
+    float: left;
+    width: 985px;
     height: 650px;
     position: absolute;
-    z-index: 5;
     border:2px solid rgb(102, 255, 0) ;
+    z-index: 5;
     font-weight:900;
     
    
@@ -148,21 +165,22 @@ img {
 
 #bd_line1 .bd_right .bd_right_line1 h2{
     font-weight:800;
-    background-color: lightcoral;
+    background-color: rosybrown;
     padding-left: 30px;
+    
 }
 
 
 #bd_line1 .bd_right .bd_right_line2{
-    float: left;
-    top: 0px;
+    
+    top: 660px;
     left: 0px;
-    width: 1250px;
-    height: 340px;
+    width: 1240px; /*1200*/
+    height: 330px;
     border:2px solid rgb(223, 243, 134) ;
     background-color: lightcoral;
     position: relative;
-    z-index: 9;
+    z-index: 2;
 }
 
 #bd_line1 .bd_right .bd_right_line3{
@@ -173,4 +191,143 @@ img {
 #bd_line1 .bd_right .line3{
     position: relative;
     background-color: gold;
+    margin-left: 20px;
+}
+
+
+#bd_line1 .bd_right .bd_right_line2 .img1{
+    
+    position: absolute;
+    left: 0px;
+    width: 335px;
+    height: 335px;
+    background-color: royalblue;
+}
+
+#bd_line1 .bd_right .bd_right_line2 .img2{
+    
+   position: absolute;
+    left: 350px;
+    width: 335px;
+    height: 335px;
+    background-color: rgb(65, 225, 118);
+}
+
+#bd_line1 .bd_right .bd_right_line2 .img3{
+  
+   position: absolute;
+    left: 700px;
+    width: 335px;
+    height: 335px;
+    background-color: rgb(225, 65, 105);
+}
+
+#bd_line1 .bd_right .bd_right_line2 .img4{
+    position: absolute;
+    left: 1050px;
+    width: 180px;
+    height: 335px;
+    background-color: rgb(63, 61, 61);
+}
+
+#bodyer .page2{
+    position: relative;
+    background-color: salmon;
+    height: 1050px;
+    
+}
+
+#bodyer .page2 .summer{
+    position: absolute;
+}
+
+#bodyer .page2 .summer h2{
+    font-weight:800;
+    background-color: rgb(143, 188, 178);
+    padding-left: 100px;
+    
+}
+#bodyer .page2 .summer .pics{
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    left: 100px;
+    background-color: seagreen;
+}
+
+#bodyer .page2 .summer .pics2{
+    position: relative;
+    top: 20px;
+    width: 1200px;
+    height: 300px;
+    left: 100px;
+    background-color:powderblue;
+}
+
+
+#bodyer .page2 .summer .pics3{
+    position: relative;
+    top: 40px;
+    width: 1200px;
+    height: 300px;
+    left: 100px;
+    background-color :aqua;
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in1{
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    background-color: aquamarine;
+    
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in1{
+    position: absolute;
+    float: left;
+    width: 30%;
+    height: 90%;
+    background-color: aquamarine;
+    
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in2{
+    position: absolute;
+    float: left;
+    left: 33%;
+    width: 30%;
+    height: 90%;
+    
+    background-color: aquamarine;
+    
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in2{
+    position: absolute;
+    float: left;
+    left: 33%;
+    width: 30%;
+    height: 90%;
+    background-color: aquamarine;
+    
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in3{
+    position: absolute;
+    float: left;
+    left: 66%;
+    width: 30%;
+    height: 90%;
+    background-color: aquamarine;
+    
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in3{
+    position: absolute;
+    float: left;
+    left: 66%;
+    width: 30%;
+    height: 90%;
+    background-color: aquamarine;
+    
 }

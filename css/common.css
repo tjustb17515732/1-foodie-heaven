@@ -11,6 +11,7 @@ a{
 }
 body{
    background-image: url(../images/主页主图.jpg); 
+   
 }
  
 #wrapper{ /*浮于背景之上的1400px宽的界面*/

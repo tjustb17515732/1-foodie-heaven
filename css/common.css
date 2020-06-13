@@ -17,6 +17,7 @@ body{
 #wrapper{ /*浮于背景之上的1400px宽的界面*/
     left: 15%;
     width: 1400px;
+    margin-top: 10px;
     /*margin:20px auto;
      /* 这是顶部框左右宽度 1400像素*/
     border:2px solid #33cc3b98;
@@ -74,4 +75,91 @@ body{
 #header_top{
     position: relative;
     z-index: 100;
+}
+
+#foot{
+    position: relative;
+    height: 270px;
+    left: 0%;
+    width: 100%;
+    background-color: rgb(51, 51, 51);
+    color: azure;
+}
+#foot a{
+    color: azure;
+}
+#foot .foot{
+    position: relative;
+    margin: auto;
+    width: 73%;
+    background-color: rgb(127, 255, 202); 
+}
+
+#foot .foot .foot_in1{
+    position: absolute;
+    float: left;
+    left: 2%;
+    width: 30%;
+    height: 270px;
+  /*  background-color: rgb(42, 136, 105);*/
+   
+    
+}
+
+#foot .foot .foot_in2{
+    position: absolute;
+    float: left;
+    left: 35%;
+    width: 30%;
+    height: 270px;
+   /* background-color: rgb(42, 86, 136);*/
+   
+    
+}
+
+#foot .foot .foot_in3{
+    position: absolute;
+    float: left;
+    left: 68%;
+    width: 30%;
+    height: 270px;
+    /*background-color: rgb(125, 42, 136);*/
+    z-index: 100;
+    
+}
+
+#foot .foot .foot_in1 .foot_in1_text{
+    margin-left: 20px;
+    margin-top: 35px;
+   /* background-color: blueviolet;*/
+}
+
+#foot .foot .foot_in2 .foot_in2_pic{
+    margin-top:50px;
+    margin-left:110px;
+   /*  background-color: brown; */
+    font-size: 20px;
+}
+
+#foot .foot .foot_in2 .foot_in2_text{
+    margin-left:110px;
+    font-size: 15px;
+    
+}
+
+#foot .foot .foot_in2 .foot_in2_text p{
+   margin: 4px;
+}
+
+#foot .foot .foot_in3 .foot_in3_pic{
+    font-size: 20px;
+    margin-left: 120px;
+    margin-top: 50px
+    
+}
+
+#foot .foot .foot_in3 .foot_in3_text{
+    font-size: 12px;
+  
+    margin-left: 120px;
 }

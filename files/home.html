@@ -5,22 +5,17 @@
 <!-- <base href="http://www.foodie heaven.com"/>
     <base target="_blank"/> -->
 <title>美食天堂</title>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/css/amazeui.css">
+<link rel="stylesheet" type="text/css" href="/css/">
 <link rel="stylesheet" type="text/css" href="../css/common.css">
 <link rel="stylesheet" type="text/css" href="../css/main.css">
 <link rel="stylesheet" type="text/css" href="/css/search.css">
-<link rel="stylesheet" type="text/css" href="/css/sliderx.css">
 </head>
 
 <body>
     <div>
         <div id="header_top"> 
-            <nav>
+           <nav>
                 <p>FOODIE HEAVEN</p>
                 <ul>
                     <li><a href="#">首页</a></li>
@@ -34,7 +29,7 @@
                     <li><a href="#">About me</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-            </nav>
+            </nav>-->
         </div>
         <div id="wrapper">
             <div id="header">
@@ -116,21 +111,24 @@
                         }
                         .big{
                             width: 935px;
-                            height:550px;
-                            
+                            height:580px;
+                        
                             margin:20px  auto;
                             background-color: aqua;
                         }
                         .big ul{
-                            width: 800x;
-                            height: 250px;
+                            width: 935px;
+                            height: 580px;
                             border: 1px solid black;
-                            position: relative;
+                            position: absolute;
+                            left: 23px;
                             overflow: hidden;
+                            padding-left: 0px;
+                           
                         }
                         .big li{
-                            width: 800px;
-                            height: 250px;
+                            width: 935px;
+                            height: 580px;
                             line-height: 100px ;
                             text-align: center;
                         }
@@ -159,27 +157,32 @@
                             height: 30px;
                             margin: 10px ;
                             position: absolute;
-                            top:25px ;
-                            left:783px;
+                            top:7px ;
+                            left:868px;
+                            border:2px solid rgb(83, 83, 83) ;
+                            border-radius: 4px;
+                            
                         }
                         .big .input2{ 
                             width: 30px;
                             height: 30px;
                             margin: 10px ;
                             position: absolute;
-                            top:25px ;
-                            left:823px;
+                            top:7px ;
+                            left:918px;
+                            border:2px solid rgb(83, 83, 83) ;
+                            border-radius: 4px;
                             }
                     </style>
                         <div class="big">
                         <ul>
-                        <li class="color1" style="top:0;"> <img src="/images/主页主图.jpg" alt=""></li>
-                        <li class="color2" style="top:250px;"><img src="/images/图片滚动1.jpg" alt=""></li>
-                        <li class="color3" style="top:500px;"><img src="/images/主页主图.jpg" alt=""></li>
-                        <li class="color4" style=" top:-250px;"><img src="/images/图片滚动1.jpg" alt=""></li>
+                        <li class="color1" style="top:0;"> <img src="/images/家常菜.jpg" alt=""></li>
+                        <li class="color2" style="top:580px;"><img src="/images/图片滚动1.jpg" alt=""></li>
+                        <li class="color3" style="top:1160px;"><img src="/images/主页主图.jpg" alt=""></li>
+                        <li class="color4" style=" top:-580px;"><img src="/images/图片滚动1.jpg" alt=""></li>
                         </ul>
-                        <input class="input1" type="image"  src="/images/搜索.jpg">
-                        <input class="input2" type="image"  src="/images/搜索.jpg">
+                        <input class="input1" type="image"  src="/images/左箭头.jpg">
+                        <input class="input2" type="image"  src="/images/右箭头.jpg">
                         </div>
                          <script>
                         window.onload=function () {
@@ -188,19 +191,19 @@
                             var allColor=document.getElementsByTagName("li");
                             oIpt2.addEventListener("click",function () {
                             for(var i=0;i<allColor.length;i++){
-                                allColor[i].style.top=parseFloat(allColor[i].style.top)-250+"px";
+                                allColor[i].style.top=parseFloat(allColor[i].style.top)-580+"px";
                                 allColor[i].style.transition=1+"s"
-                                        if(allColor[i].style.top==-750+"px"){
-                                            allColor[i].style.top=250+"px"
+                                        if(allColor[i].style.top==-1740+"px"){
+                                            allColor[i].style.top=580+"px"
                                             allColor[i].style.transition=0+"s"
                                         }
                             }
                             },false)
                             oIpt1.addEventListener("click",function () {
                                 for(var i=0;i<allColor.length;i++){
-                                    allColor[i].style.top=parseFloat(allColor[i].style.top)+250+"px";
+                                    allColor[i].style.top=parseFloat(allColor[i].style.top)+580+"px";
                                     allColor[i].style.transition=1+"s"
-                                    if (allColor[i].style.top==1000+"px"){
+                                    if (allColor[i].style.top==2320+"px"){
                                         allColor[i].style.top=0+"px"
                                         allColor[i].style.transition=0+"s"
                                     }
@@ -272,12 +275,63 @@
                 </div>
             </div>
             
-            <div class
+            
         </div> 
-        
+       
     </div>
 
-   
+    <div id="foot">
+        <div class="foot">
+            
+            
+
+            <div class="foot_in1">
+                <div class="foot_in1_pic">
+                    <div style="margin-left: 20px; margin-top: 50px; width: 150px; padding: 10px; background-color:none;"> <a href="https://www.beitaichufang.com/"><img src="../images/logo1.png"  /></a></div>
+                    
+                </div>
+                
+                <div class="foot_in1_text">
+                    <a href="##" class="am-icon-btn am-icon-twitter"></a>
+                    <a href="##" class="am-icon-btn  am-icon-qq"></a>
+                    <a href="##" class="am-icon-btn  am-icon-wechat"></a>
+                    <a href="##" class="am-icon-btn  am-icon-weibo"></a>
+                    <a href="##" class="am-icon-btn  am-icon-phone"></a>
+                </div>
+            </div>
+
+            <div class="foot_in2">
+                <div class="foot_in2_pic">关于吃货天堂</div>
+                <div class="foot_in2_text">
+                 <ul>
+                    <li>团队介绍</li><p>
+                    <li>美食专家</li></p>
+                    <li>加入我们</li></p>
+                    <li>商业合作</li></p>
+                    <li>投稿</li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="foot_in3">
+                <div class="foot_in3_pic">联系我们</div>
+                <div class="foot_in3_text">
+                    <address>
+                        <strong>Foodle Heaven, Inc.</strong><br>
+                            1355 Market Street, Suite 900<br>
+                            San Francisco, CA 94103<br>
+                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                        </address>
+                        
+                        <address>
+                            <strong>Full Name</strong><br>
+                            <a href="mailto:#">first.last@example.com</a>
+                        </address>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 
         <div> 
         <!--地址CSS

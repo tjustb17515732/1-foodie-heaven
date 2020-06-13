@@ -113,10 +113,10 @@ img {
 #bd_line1 .bd_line1_left{
     border:2px solid rgba(201, 201, 201,0.5); border-style:none solid;
     background-color:fuchsia;
-    margin-left: 15px;
+    margin-left: -10px;
     float: left;
     height: 800px;
-    width: 110px;
+    width: 140px;
     
    
 }
@@ -331,3 +331,4 @@ img {
     background-color: aquamarine;
     
 }
+

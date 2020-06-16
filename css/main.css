@@ -121,9 +121,6 @@ img {
    
 }
 
-.bd_line1_left:hover {
-    opacity:0.5;
-   }
 
 #bd_line1 .bd_line1_left .zuo
 {
@@ -198,36 +195,37 @@ img {
 #bd_line1 .bd_right .bd_right_line2 .img1{
     
     position: absolute;
-    left: 0px;
+    left: 22px;
     width: 335px;
-    height: 335px;
+    height: 250px;
     background-color: royalblue;
 }
 
 #bd_line1 .bd_right .bd_right_line2 .img2{
     
    position: absolute;
-    left: 350px;
+    left: 390px;
     width: 335px;
-    height: 335px;
+    height: 250px;
     background-color: rgb(65, 225, 118);
 }
 
 #bd_line1 .bd_right .bd_right_line2 .img3{
   
    position: absolute;
-    left: 700px;
+    left: 760px;
     width: 335px;
-    height: 335px;
+    height: 250px;
     background-color: rgb(225, 65, 105);
 }
 
 #bd_line1 .bd_right .bd_right_line2 .img4{
     position: absolute;
-    left: 1050px;
-    width: 180px;
-    height: 335px;
-    background-color: rgb(63, 61, 61);
+    top: 30px;
+    left: 1120px;
+    width: 110px;
+    height: 200px;
+    background-color: saddlebrown
 }
 
 #bodyer .page2{
@@ -243,6 +241,7 @@ img {
 
 #bodyer .page2 .summer h2{
     font-weight:800;
+    font-size: 28px;
     background-color: rgb(143, 188, 178);
     padding-left: 100px;
     
@@ -298,7 +297,7 @@ img {
     width: 30%;
     height: 90%;
     
-    background-color: aquamarine;
+    background-color:aquamarine;
     
 }
 
@@ -331,4 +330,55 @@ img {
     background-color: aquamarine;
     
 }
+
+
+#bodyer .page2 .summer .pics2 .pics2_in1 .pics2_in1_pic{
+    height: 90%;
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in2 .pics2_in2_pic{
+    height: 90%;
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in3 .pics2_in3_pic{
+    height: 90%;
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in1 .pics2_in1_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+   
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in2 .pics2_in2_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in3 .pics2_in3_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in1 .pics3_in1_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in2 .pics3_in2_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in3 .pics3_in3_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+}
+
 

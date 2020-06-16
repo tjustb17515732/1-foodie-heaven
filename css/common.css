@@ -20,7 +20,7 @@ body{
     margin-top: 0px;
     /*margin:20px auto;
      /* 这是顶部框左右宽度 1400像素*/
-    border:2px solid #33cc3b98;
+    border:2px solid none;
     
     position: absolute; z-index: 110
 }
@@ -31,7 +31,7 @@ body{
 #wrapper #header .hd_left{
     float: left;
     margin: 0px; /* 这是调整元素间距*/
-    border:2px solid red;
+    border:2px solid none;
     height:50px;
     position: absolute; z-index: 100
     
@@ -40,8 +40,8 @@ body{
 #wrapper #header .hd_sousuo{
     
      float: left;
-     width: 500px;
-     left: 100px;
+     width: 800px;
+     left: 110px;
      padding: 10px;
      padding-left: 100px;
      position: relative;
@@ -52,11 +52,11 @@ body{
     padding-right: 60px;
     text-decoration: none;
     background-color:none;
-    border:2px solid #dbff0e;
+    border:2px solid none;
     
     font-size: 18px; 
     height:45px ;
-    margin-top: 5px;
+    margin-top: 2px;
    /* position: absolute; z-index: 99*/
 }
 

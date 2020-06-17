@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* 这个a是对整个文档来进行默认配置的*/
+a{
+    text-decoration: none;   
+    color: #000; 
+}
+
+*{/* 清除界面所有脏边框 div换行时产生的空格*/
+    margin: 0px;
+    padding: 0px;
+}
+body{
+   background-image: url(x); 
+   
+}
+ 
+#wrapper{ /*浮于背景之上的1400px宽的界面*/
+    left: 15%;
+    width: 1400px;
+    margin-top: 0px;
+    /*margin:20px auto;
+     /* 这是顶部框左右宽度 1400像素*/
+    border:2px solid none;
+    
+    position: absolute; z-index: 110
+}
+
+#bodyer{
+    clear: left;
+}
+#wrapper #header .hd_left{
+    float: left;
+    margin: 0px; /* 这是调整元素间距*/
+    border:2px solid none;
+    height:50px;
+    position: absolute; z-index: 100
+    
+}
+
+#wrapper #header .hd_sousuo{
+    
+     float: left;
+     width: 800px;
+     left: 110px;
+     padding: 10px;
+     padding-left: 100px;
+     position: relative;
+}
+
+#wrapper #header .hd_right{
+    float: right;
+    padding-right: 60px;
+    text-decoration: none;
+    background-color:none;
+    border:2px solid none;
+    
+    font-size: 18px; 
+    height:45px ;
+    margin-top: 2px;
+   /* position: absolute; z-index: 99*/
+}
+
+
+.hd_right a{ 
+    float: left;
+    margin: 14px;
+    color: rgb(248, 248, 248);
+    text-decoration: none; /*取消选项下划线*/
+    margin-right: 16px;
+    background-color: none;
+    text-shadow:0 0 8px rgba(48, 48, 48, 0.904);
+    
+}
+
+.hd_right a:hover{ /*选中变色*/
+    color: rgba(255, 255, 255, 0.856);
+} 
+
+#wrapper #header{
+    overflow: auto; /*可将左右大小不一致的层 自动调换为一致 层高与 right height有关*/
+    margin: 15px auto;
+    
+}
+
+
+#header_top{
+    position: relative;
+    z-index: 100;
+}
+
+#foot{
+    position: relative;
+    height: 270px;
+    left: 0%;
+    width: 100%;
+    background-color: rgb(51, 51, 51);
+    color: azure;
+}
+#foot a{
+    color:none;
+}
+#foot .foot{
+    position: relative;
+    margin: auto;
+    width: 73%;
+    background-color: rgb(127, 255, 202); 
+}
+
+#foot .foot .foot_in1{
+    position: absolute;
+    float: left;
+    left: 2%;
+    width: 30%;
+    height: 270px;
+  /*  background-color: rgb(42, 136, 105);*/
+   
+    
+}
+
+#foot .foot .foot_in2{
+    position: absolute;
+    float: left;
+    left: 35%;
+    width: 30%;
+    height: 270px;
+   /* background-color: rgb(42, 86, 136);*/
+   
+    
+}
+
+#foot .foot .foot_in3{
+    position: absolute;
+    float: left;
+    left: 68%;
+    width: 30%;
+    height: 270px;
+    /*background-color: rgb(125, 42, 136);*/
+    z-index: 100;
+    
+}
+
+#foot .foot .foot_in1 .foot_in1_text{
+    margin-left: 20px;
+    margin-top: 35px;
+   /* background-color: blueviolet;*/
+}
+
+#foot .foot .foot_in2 .foot_in2_pic{
+    margin-top:50px;
+    margin-left:110px;
+   /*  background-color: brown; */
+    font-size: 20px;
+}
+
+#foot .foot .foot_in2 .foot_in2_text{
+    margin-left:110px;
+    font-size: 15px;
+    
+}
+
+#foot .foot .foot_in2 .foot_in2_text p{
+   margin: 4px;
+}
+
+#foot .foot .foot_in3 .foot_in3_pic{
+    font-size: 20px;
+    margin-left: 120px;
+    margin-top: 50px
+    
+}
+
+#foot .foot .foot_in3 .foot_in3_text{
+    font-size: 12px;
+  
+    margin-left: 120px;
+}

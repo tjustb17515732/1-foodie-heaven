@@ -195,7 +195,6 @@ img {
 
 #bd_line1 .bd_right .line3{
     position: relative;
-    border:2px solid rgb(96, 148, 244); 
     margin-left: 20px;
 }
 
@@ -206,7 +205,7 @@ img {
     left: 22px;
     width: 335px;
     height: 250px;
-    background-color: royalblue;
+   
 }
 
 #bd_line1 .bd_right .bd_right_line2 .img2{
@@ -215,7 +214,7 @@ img {
     left: 390px;
     width: 335px;
     height: 250px;
-    background-color: rgb(65, 225, 118);
+   
 }
 
 #bd_line1 .bd_right .bd_right_line2 .img3{
@@ -224,7 +223,7 @@ img {
     left: 760px;
     width: 335px;
     height: 250px;
-    background-color: rgb(225, 65, 105);
+    
 }
 
 #bd_line1 .bd_right .bd_right_line2 .img4{
@@ -233,7 +232,7 @@ img {
     left: 1100px;
     width: 140px;
     height: 170px;
-    background-color: saddlebrown
+    
 }
 
 #bodyer .page2{
@@ -259,7 +258,7 @@ img {
     width: 1200px;
     height: 300px;
     left: 100px;
-    background-color: seagreen;
+   
 }
 
 #bodyer .page2 .summer .pics2{

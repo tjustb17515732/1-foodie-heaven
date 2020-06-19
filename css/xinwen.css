@@ -1,0 +1,394 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.block {
+    width: 1903px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.box_big {
+    position: absolute;
+    width: 5760px;
+    height: 800px;
+    background-color: yellow;
+}
+
+.nav {
+    transition: margin-left 0.7s linear;
+}
+
+.box {
+    width: 1920px;
+    height: 800px;
+    float: left;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.spot {
+    position: absolute;
+    width: 100%;
+    text-align: right;
+    bottom: 3px;
+}
+
+.spot_list {
+
+    width: 13px;
+    height: 13px;
+    font-size: 0px;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 3px;
+    line-height: 30px;
+    font-weight: bolder;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    /*margin: 15px;*/
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.btn {
+    font-size: 30px;
+    color: rgba(70, 66, 66, 0.7);
+    width: 85%;
+    height: 80px;
+    position: absolute;
+    margin: 140px;
+    top: 200px;
+}
+
+.left_btn, .right_btn {
+    width: 30px;
+    height: 80px;
+    z-index: 15;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    line-height: 80px;
+    border-radius:7px;
+
+}
+
+.left_btn {
+    float: left;
+}
+
+.right_btn {
+    float: right;
+}
+
+
+#bodyer{
+    border:2px solid rgb(244, 245, 239) ;
+    margin: auto;
+    width: 1400px;
+    overflow: auto;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+
+#bodyer .bd_line1{
+    border:2px solid sandybrown 
+}
+
+
+#bodyer .bd_line1.zuo{
+    position: relative;
+    
+}
+#bd_line1 .bd_line1_left{
+   
+    background-color:none;
+    margin-left: 12px;
+    margin-right: -5px;
+    float: left;
+    height: 960px;
+    width: 140px;
+    border-bottom: 2px solid  rgba(201, 201, 201,0.5);
+   
+}
+
+
+#bd_line1 .bd_line1_left .zuo
+{
+    float: left;
+}
+
+#bd_line1 .bd_right{
+    
+    border:2px solid rgb(255, 255, 255) ;
+    margin:0;
+    height: 980px;
+    width: 1245px;
+    position: relative;
+    left: 150px;
+    /*font-size: 3a0px;*/
+    
+}
+
+#bd_line1 .bd_right .bd_right_right {
+    float: right;
+    height: 650px;
+    width: 250px;
+    border:2px solid rgb(216, 216, 216) ;
+    position: relative;
+    z-index: 5;
+   
+}
+
+#bd_line1 .bd_right .bd_right_line1 {
+    float: left;
+    
+    width: 985px;
+    height: 650px;
+    position: absolute;
+    color: rgb(243, 136, 109);
+    border:2px solid rgb(251, 253, 249) ;
+    z-index: 5;
+    font-weight:900;
+    
+    
+   
+}
+
+#bd_line1 .bd_right .bd_right_line1 h2{
+    font: weight 800;
+    font-size: 28px;
+    background-color: none;
+    padding-left: 30px;
+    
+}
+
+
+#bd_line1 .bd_right .bd_right_line2{
+    padding-top: 10px;
+    top: 660px;
+    left: 0px;
+    width: 1240px; /*1200*/
+    height: 298px;
+    border:2px solid rgb(253, 253, 253) ;
+    background-color: none;
+    position: relative;
+    border-bottom: 2px solid  rgba(201, 201, 201,0.5);
+    z-index: 2;
+}
+
+#bd_line1 .bd_right .bd_right_line3{
+    background-color: none;
+    
+}
+
+#bd_line1 .bd_right .line3{
+    position: relative;
+    margin-left: 20px;
+}
+
+
+#bd_line1 .bd_right .bd_right_line2 .img1{
+    
+    position: absolute;
+    left: 22px;
+    width: 335px;
+    height: 250px;
+   
+}
+
+#bd_line1 .bd_right .bd_right_line2 .img2{
+    
+   position: absolute;
+    left: 390px;
+    width: 335px;
+    height: 250px;
+   
+}
+
+#bd_line1 .bd_right .bd_right_line2 .img3{
+  
+   position: absolute;
+    left: 760px;
+    width: 335px;
+    height: 250px;
+    
+}
+
+#bd_line1 .bd_right .bd_right_line2 .img4{
+    position: absolute;
+    top: 50px;
+    left: 1100px;
+    width: 140px;
+    height: 170px;
+    
+}
+
+#bodyer .page2{
+    position: relative;
+    background-color: none;
+    height: 1120px;
+    
+}
+
+#bodyer .page2 .summer{
+    position: absolute;
+}
+
+
+
+#bodyer .page2 .summer .text {
+    
+   margin-bottom: 15px;
+ }
+
+#bodyer .page2 .summer .pics{
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    left: 100px;
+   
+}
+
+#bodyer .page2 .summer .pics2{
+    position: relative;
+    top: 20px;
+    width: 1200px;
+    height: 300px;
+    left: 100px;
+    background-color:none;
+    
+}
+
+
+#bodyer .page2 .summer .pics3{
+    position: relative;
+    top: 20px;
+    width: 1200px;
+    height: 300px;
+    left: 100px;
+    background-color :none;
+}
+
+
+
+#bodyer .page2 .summer .pics2 .pics2_in1{
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    background-color: none;
+    
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in1{
+    position: absolute;
+    float: left;
+    width: 30%;
+    height: 90%;
+    background-color: none;
+    
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in2{
+    position: absolute;
+    float: left;
+    left: 35%;
+    width: 30%;
+    height: 90%;
+    
+    background-color:none;
+    
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in2{
+    position: absolute;
+    float: left;
+    left: 35%;
+    width: 30%;
+    height: 90%;
+    background-color: none;
+    
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in3{
+    position: absolute;
+    float: left;
+    left: 70%;
+    width: 30%;
+    height: 90%;
+    background-color: none;
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in3{
+    position: absolute;
+    float: left;
+    left: 70%;
+    width: 30%;
+    height: 90%;
+}
+
+
+#bodyer .page2 .summer .pics2 .pics2_in1 .pics2_in1_pic{
+    height: 90%;
+    
+    
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in2 .pics2_in2_pic{
+    height: 90%;
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in3 .pics2_in3_pic{
+    height: 90%;
+    
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in1 .pics2_in1_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+   
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in2 .pics2_in2_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+}
+
+#bodyer .page2 .summer .pics2 .pics2_in3 .pics2_in3_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in1 .pics3_in1_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in2 .pics3_in2_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+}
+
+#bodyer .page2 .summer .pics3 .pics3_in3 .pics3_in3_text{
+    font-size: 16px;
+    text-align:center;
+    line-height: 35px;
+}
+
+

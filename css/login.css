@@ -1,0 +1,22 @@
+@charset "utf-8";
+.header{
+    
+    color: rgb(255, 255, 255);
+    height: 300px; 
+    font-size: 25px;
+   background-image: url(../images/登录注册/23e6152798ac581afdfe4f00d1aac361西瓜_爱奇艺.jpg);
+   text-align: center;
+}
+
+.header h1{
+    margin-top: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 3px 5px #3f3f3f;
+}
+ 
+.header p{
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 3px 5px #3f3f3f;
+    font-size: 20px;
+}
+ 

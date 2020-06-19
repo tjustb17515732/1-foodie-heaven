@@ -1,0 +1,33 @@
+
+/*主体*/
+#content {width:1200px;margin:50px auto;}
+
+
+
+/*分页*/
+.pages {text-align: center;margin: 20px auto 0;}
+.pages a {display: inline-block;padding: 2px 6px 3px;background: #fff;color: #333;margin:0 7px;border:1px solid #333;font-size:14px;border-radius:4px;}
+.pages a.aon {background: #FFB31A;color:#fff;border:1px solid #FFB31A;}
+
+/*typehead*/
+.type-tab{margin-bottom:25px;margin-top:11px;}
+.type-head {font-size: 14px;text-align: center;width:auto;margin:0 auto;display:inline-block;}
+.type-head a {display: inline-block;float: left;color: #383830;height:42px;line-height:42px;margin-right:30px;}
+.type-head a.active {border-bottom: 2px solid #383830;font-weight: bold;color: #383830;}
+.type-head a:hover{color:#ffaa00;}
+
+.mini-tab{margin-top:30px;height:42px;}
+.mini-tab a{font-size:18px;display:inline-block;height:42px;line-height:40px;padding:0 32px;float:left;margin-right:20px;color:#959595;border: 1px solid #959595;border-radius: 4px;}
+.mini-tab a.active{background: #FFB31A;color:#fff;border: 1px solid #FFB31A;}
+
+.title-head {line-height:18px;}
+.title-head h3 {font-size: 18px;display: inline-block;font-weight: bold;color: #256DC6;}
+.title-head .more {display: inline-block;float: right;color: #256DC6;font-size: 16px;}
+.title-head .more-icon {vertical-align: middle;height: 14px;position: relative;top: -2px;}
+.stit h3{font-size: 16px;}
+.mbt30{margin-bottom: 30px;}
+
+
+
+.proicon{margin-left:3px;width:16px;height:16px;display:inline-block;vertical-align:middle;}
+.proicon .proimg{display:block;width:100%;}

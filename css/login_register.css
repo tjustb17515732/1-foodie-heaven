@@ -1,0 +1,10 @@
+.app{
+    
+     float: right; 
+     position: relative; 
+     margin-top: -720px;
+     margin-right: 450px;
+     height: 636px;
+     width: 254px;
+     border:2px solid rgb(216, 216, 216) ;
+}

@@ -6,7 +6,9 @@
  * Fix the flawed CSS box model - Yes, IE6's box model is better
  * Browser support: IE8+
  * via: http://paulirish.com/2012/box-sizing-border-box-ftw/
+ 
  */
+ @charset "utf-8";
 *,
 *:before,
 *:after {

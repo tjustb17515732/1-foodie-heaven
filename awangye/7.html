@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table align="center" height="120px" width="80%">
+        <tr>
+            <td align="right">输入第一个数字：</td>
+            <td><input type="text" id="first"></td>
+        </tr>
+        <tr>
+            <td align="right">输入第二个数字：</td>
+            <td><input type="text" id="second"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" onclick="GetNumResult('+')"value="相加"/>
+                <input type="button" onclick="GetNumResult('-')"value="相减"/>
+                <input type="button" onclick="GetNumResult('*')"value="相乘"/>
+                <input type="button" onclick="GetNumResult('/')"value="相除"/>
+                <input type="button" onclick="GetNumResult('%')"value="求余"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>计算结果:<output id="optresult"/></td>
+        </tr>
+    </table>
+    <script>
+        function GetNumResult(oper){
+            var one=parseInt(document.getElementById("first").value);
+            var two=parseInt(document.getElementById("second").value);
+            var result=0.00;
+            if(!isNaN(one) &&!isNaN(two)){
+                try{
+                    switch(oper){
+                        case"+":
+                        result=one+two;
+                        break;
+                        case"-":
+                        result=one-two;
+                        break;
+                        case"*":
+                        result=one*two;
+                        break;
+                        case"/":
+                        result=one/two;
+                        break;
+                        case"%":
+                        if(two==0){
+                            throw"被除数不能等于零";
+                        }
+                        else{
+                            result=one%two;
+                        }break;
+
+                        }
+                    }
+                catch(e){
+                    alert(e);
+                }finally{
+                    document.getElementById("optresult").value=result;
+                }
+            }else{
+                alert("数字的内容只能为数字");
+            }
+        }
+    </script>
+</body>
+</html>

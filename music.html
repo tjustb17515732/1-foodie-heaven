@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>  
+body{
+    height:100%;
+max-height:100%;
+    background:#0e0808 url("img/body.jpg") center top fixed no-repeat;
+    font-family:Helvetica,Arial,sans-serif;
+    color:#FFFFFF;}
+            #topBar {
+            background-color: rgba(0, 0,0, 0.8); 
+            margin-top: 0px; 
+            top:0px; 
+            padding: 15px 0px ;
+            background-position:initial initial;
+            background-repeat: initial initial;
+
+            height: 50px;
+            line-height: 50px;
+            color: #FFFFFF;
+            font-size: 12px;
+            text-shadow: 0 0 8px rgba(0, 0,0, 0.3);
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 10000;
+        }
+        .center{
+            width: 960px ;
+            margin: 0px auto;
+           /*border: solid 1px;*/
+            position: relative;
+        }
+        .topLeft{
+            margin-left: 40px;
+             }
+        #categoryList{
+            height: 28px;
+            /*overflow: hidden;*/
+            width: 28px;
+            position: absolute;
+           top: 13px;
+           left: -20px;
+           text-align: left ;
+           z-index: 10000;
+        }
+        ul {
+            list-style: none;
+        }
+        #categoryList ul {
+           width: 160px;
+           border-radius: 4px;
+           opacity: 0;
+           box-shadow: 0 0 1px rgba(0, 0,0, 0.8), 0 10px 25px rgba(0, 0,0, 0.4);
+       }
+       #categoryList:hover ul {
+            opacity: 1;
+        }
+        #categoryList li {
+            width: 140px;
+            height: 26px;
+            line-height: 26px;
+            padding: 0 10px;
+            display: block;
+            position: relative;
+            font-size: 12px;
+            border-bottom: 1px solid rgba(0, 0,0, 0.2);
+        }
+        #categoryList li a {
+            display: block;
+            color: #CCCCCC;
+        }
+        #categoryList li:first-child {
+            border-radius: 4px 4px 0 0;
+            padding-top: 4px;
+        }
+        #categoryList li:last-child {
+            border-radius: 0 0 4px 4px;
+            padding-bottom: 4px;
+        }
+        #categoryList li ul li:first-child {
+            border-radius: 0 4px 0 0;
+            padding-top: 4px;
+        }
+        #categoryList li ul li:last-child {
+            border-radius: 0 0 4px 0;
+            padding-bottom: 4px;
+        }
+        #categoryList li ul li:first-child a {
+            color: red;
+        }
+        #categoryList li ul li:last-child a {
+            color: blue;
+        }
+ </style>
+</head>
+<body>
+    <div id="topBar">
+        <div class="center">
+            <div class="topLeft">
+                <div class="center"> 
+                    <div class="topLeft">免费音乐，好听音乐，尽在音乐吧</div>
+                        <div id="categoryList"><span class="buttonList"></span>
+                            <ul> 
+                                <li>
+                                <a href="#">blues</a><span class="count">20</span>
+                            <ul>
+                                <li>
+                                <a href="#">blues rock</a><span class="count">4</span>
+                        
+                              </li>
+                               <li>
+                                <a href="#">Gospel</a><span class="count">1</span>
+                               </li>
+                            <li>
+                                <a href="#">Rhythm and  blues</a><span class="count">14</span> 
+                            </li>
+                            <li>
+                                <a href="#">Soul</a><span class="count">7</span>
+                            </li>
+                            </ul>
+                                </li>
+                                <li>
+                                    <a href="#">country</a><span class="count">20</span>
+                                <ul>
+                                    <li>
+                                    <a href="#">blues rock</a><span class="count">4</span>
+                            
+                                  </li>
+                                   <li>
+                                    <a href="#">Gospel</a><span class="count">1</span>
+                                   </li>
+                                <li>
+                                    <a href="#">Rhythm and  blues</a><span class="count">14</span> 
+                                </li>
+                                <li>
+                                    <a href="#">Soul</a><span class="count">7</span>
+                                </li>
+                                </ul>
+                                    </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>  
+body{
+    height: 100%;
+    min-height: 100%;
+    background: #0e0808 url("body.jpg") center top fixed no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+.noise {
+     background:url("noise.png") left top;
+     width:100%;
+     height:100%;
+     position: fixed;
+ }
+#topBar{
+    background-color: rgba(0, 0,0, 0.8);
+    margin-top: 0px;
+    top:0px;
+    padding: 15px 0px; 
+    background-position:initial initial; 
+    background-repeat: initial initial;
+    height: 50px;
+    line-height: 50px;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-shadow: 0 0 8px rgba(0, 0,0, 0.3);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10000;
+}
+#topBar a{
+   color: #FFFFFF;
+}
+.center{
+    width: 960px;
+    margin: auto;
+    /*border: solid 1px;*/
+    position:relative;
+
+}
+.topLeft{
+ margin-left: 40px;
+
+}
+#categoryList{
+ height: 28px;
+     overflow: hidden;
+     width: 28px;
+     position:absolute;
+     top: 13px;
+     left: -20px;
+     text-align: left;
+     z-index: 10000;
+     
+}
+#categoryList .buttonList {
+     background-position:-575px -175px;
+     cursor: pointer;
+     height: 23px;
+     text-align: center;
+     border-radius: 4px;
+     width: 23px;
+     border: 1px solid rgba(255, 255, 255, 0.4);
+     display:block;
+     margin-bottom: 6px;
+ }
+ #categoryList:hover .buttonList {
+     border: 1px solid rgba(255, 255, 255, 1);
+     background-color: black;
+ }
+ #categoryList:hover {
+     height:600px;
+     width:360px;
+ }
+ul{
+   list-style: none;
+}
+#categoryList ul{
+    width: 160px;
+    border-radius: 4px;
+    opacity: 0;
+    box-shadow: 0 0 1px rgba(0, 0,0, 0.8), 0 10px 25px rgba(0, 0,0, 0.4);
+}
+#categoryList:hover ul{
+    opacity: 1;
+}
+#categoryList li{
+    width: 140px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    display: block;
+    position: relative;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(0, 0,0, 0.2);
+}
+#categoryList li a{
+    display: block;
+    color: #CCCCCC;
+}
+#categoryList li ul {
+     position: absolute;
+     right: 0px;
+     top: 0px;
+     width:0;
+     opacity:0!important;
+     border-radius: 0 4px 4px 0;
+     left:160px;
+     overflow: hidden;
+ }
+ #categoryList li:hover {
+     background:#000000;
+ }
+ #categoryList li:hover ul {
+     display:block;
+     opacity:1!important;
+     width:160px;
+ }
+#categoryList li:first-child{
+    border-radius: 4px 4px 0 0;
+    padding-top: 4px;
+}
+#categoryList li:last-child{
+    border-radius: 0 0 4px 4px;
+    padding-bottom: 4px;
+}
+#categoryList li ul li:first-child{
+    border-radius: 0 4px 0 0;
+    padding-top: 4px;
+}
+#categoryList li ul li:last-child{
+    border-radius: 0 0 4px 0;
+    padding-bottom: 4px;
+}
+#categoryList li ul li:first-child a{
+    color: red;
+}
+#categoryList li ul li:last-child a {
+    color: blue;
+}
+#categoryList .count {
+    background:rgba(255, 255, 255, 0.2);
+    color:black;
+    font-size:9px;
+    border-radius:10px;
+    display: inline-block;
+    margin-left: 4px;
+    line-height: 0px;
+    padding: 7px 5px 6px;
+    float:right;
+    margin-top: 9px;
+ }
+ #categoryList a:hover {
+    color:#FFFFFF;
+    text-decoration:none!important;
+ }
+ #categoryList a:hover .count {
+    background:rgba(255, 255, 255, 0.7)
+ }
+ /*搜索框样式*/
+ #header{
+     position: relative;
+     padding: 80px 0 27px 0;
+ }
+ .int{
+    margin:20px auto 0;/*auto居中*/
+	width:210px;
+	height:105px;
+	padding:0 0 0;
+	text-align:center;/*内容居中显示*/
+	float:none;
+ }
+ #search{
+    width:760px;
+	margin:0 auto;
+	float:none;
+ }
+ .clear{
+     clear: both;
+ }
+ .sf_search{
+     width: 100%!important;
+ }
+ #homePage.sloggato #search .sf_input{
+     border-radius: 32px;
+     font-size: 20px;
+     padding: 18px 20px 12px 65px;
+     width: 670px;
+     background-position: -740px -125px;
+
+ }
+ #homePage.sloggato #search .sf_input:focus{
+    border-radius: 32px;
+    font-size: 20px;
+    padding: 18px 20px 12px 65px;
+    width: 670px;
+    background-position: -740px -125px;
+    background-color: #099;
+ }
+.screen-reader-text{
+    display: none;}body{
+    height: 100%;
+    min-height: 100%;
+    background: #0e0808 url("body.jpg") center top fixed no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+.noise {
+     background:url("noise.png") left top;
+     width:100%;
+     height:100%;
+     position: fixed;
+ }
+#topBar{
+    background-color: rgba(0, 0,0, 0.8);
+    margin-top: 0px;
+    top:0px;
+    padding: 15px 0px; 
+    background-position:initial initial; 
+    background-repeat: initial initial;
+
+    height: 50px;
+    line-height: 50px;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-shadow: 0 0 8px rgba(0, 0,0, 0.3);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10000;
+}
+#topBar a{
+   color: #FFFFFF;
+}
+.center{
+    width: 960px;
+    margin: auto;
+    /*border: solid 1px;*/
+    position:relative;
+
+}
+.topLeft{
+ margin-left: 40px;
+
+}
+#categoryList{
+ height: 28px;
+     overflow: hidden;
+     width: 28px;
+     position:absolute;
+     top: 13px;
+     left: -20px;
+     text-align: left;
+     z-index: 10000;
+     
+}
+#categoryList .buttonList {
+     background-position:-575px -175px;
+     cursor: pointer;
+     height: 23px;
+     text-align: center;
+     border-radius: 4px;
+     width: 23px;
+     border: 1px solid rgba(255, 255, 255, 0.4);
+     display:block;
+     margin-bottom: 6px;
+ }
+ #categoryList:hover .buttonList {
+     border: 1px solid rgba(255, 255, 255, 1);
+     background-color: black;
+ }
+ #categoryList:hover {
+     height:600px;
+     width:360px;
+ }
+ul{
+   list-style: none;
+}
+#categoryList ul{
+    width: 160px;
+    border-radius: 4px;
+    opacity: 0;
+    box-shadow: 0 0 1px rgba(0, 0,0, 0.8), 0 10px 25px rgba(0, 0,0, 0.4);
+}
+#categoryList:hover ul{
+    opacity: 1;
+}
+#categoryList li{
+    width: 140px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    display: block;
+    position: relative;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(0, 0,0, 0.2);
+}
+#categoryList li a{
+    display: block;
+    color: #CCCCCC;
+}
+#categoryList li ul {
+     position: absolute;
+     right: 0px;
+     top: 0px;
+     width:0;
+     opacity:0!important;
+     border-radius: 0 4px 4px 0;
+     left:160px;
+     overflow: hidden;
+ }
+ #categoryList li:hover {
+     background:#000000;
+ }
+ #categoryList li:hover ul {
+     display:block;
+     opacity:1!important;
+     width:160px;
+ }
+#categoryList li:first-child{
+    border-radius: 4px 4px 0 0;
+    padding-top: 4px;
+}
+#categoryList li:last-child{
+    border-radius: 0 0 4px 4px;
+    padding-bottom: 4px;
+}
+#categoryList li ul li:first-child{
+    border-radius: 0 4px 0 0;
+    padding-top: 4px;
+}
+#categoryList li ul li:last-child{
+    border-radius: 0 0 4px 0;
+    padding-bottom: 4px;
+}
+#categoryList li ul li:first-child a{
+    color: red;
+}
+#categoryList li ul li:last-child a {
+    color: blue;
+}
+#categoryList .count {
+    background:rgba(255, 255, 255, 0.2);
+    color:black;
+    font-size:9px;
+    border-radius:10px;
+    display: inline-block;
+    margin-left: 4px;
+    line-height: 0px;
+    padding: 7px 5px 6px;
+    float:right;
+    margin-top: 9px;
+ }
+ #categoryList a:hover {
+    color:#FFFFFF;
+    text-decoration:none!important;
+ }
+ #categoryList a:hover .count {
+    background:rgba(255, 255, 255, 0.7)
+ }
+ /*列表*/
+#container {
+position: relative;
+z-index: 10;
+margin-bottom: 20px;
+}
+.album200 {
+height: 265px;
+width: 200px;
+margin: 0 0 35px;
+padding: 0 20px 0;
+color: #ffffff;
+text-align: center;
+float: left;
+letter-spacing: -0.2px;
+position: relative;
+}
+.album200 a {
+color:#FFFFFF;
+text-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+text-decoration: none;
+}
+.album200 .cdAlbum {
+position:absolute;
+top: 0px;
+left: 20px;
+height: 200px;
+width: 200px;
+background-position: -200px 0px;
+}
+.album200 .coverAlbum {
+background-color: rgba(48, 48,48, 0.9);
+height: 200px;
+width: 200px;
+box-shadow: 0 0 8px rgba(0, 0,0, 0.3);
+border-radius: 2px;
+overflow: hidden;
+display: block;
+position: relative;
+margin-top: 0px;
+top: 0px;
+left: 0px;
+z-index: 300px;
+}
+.album200 .patina {
+height: 200px;
+width: 200px;
+display: block;
+position: absolute;
+background-position:-450px -225px;
+top:0px;
+left:0px;
+}
+.nameAlbum, .artistAlbum {
+text-overflow:ellipsis;
+white-space: nowrap;
+overflow: hidden;
+width:100%;
+}
+.nameAlbum {
+font-size:12px;
+font-weight:bold;
+margin-top:8px;
+}
+.artistAlbum {
+font-size: 11px;
+margin-top: 6px;
+display: block;
+z-index: 200px;
+}
+.album200.animation:hover .cdAlbum {
+top:-34px;
+-webkit-transform: rotate(-180deg);
+}
+.album200.animation:hover .coverAlbum {
+margin-top:-34px;
+}
+.twitterBird, .buttonList, .facebookInvite, .facebookLogin, .ywp-btn-next, .ywp-btn-prev, .ywp-btn-play, .ywp-btn-pause, .fbButtonO, .twButtonO, .sf_input, #related_posts_thumbnails a:last-child, .diskIcon, .patina, .post-edit-link, .logo, .sf_button, .cdAlbum, .facebookConnect, .socialConnect, .ywp-page-btn-play, .ywp-page-btn-pause, .buttonLover, .buttonLover .wpfp-link, .listLover .count em {
+background-color: transparent;
+background-image:url("images/sprite.png")!important;
+background-repeat: no-repeat;
+}
+ /*搜索框样式*/
+ #header{
+     position: relative;
+     padding: 80px 0 27px 0;
+ }
+ .int{
+    margin:20px auto 0;/*auto居中*/
+	width:210px;
+	height:105px;
+	padding:0 0 0;
+	text-align:center;/*内容居中显示*/
+	float:none;
+ }
+ #search{
+    width:760px;
+	margin:0 auto;
+	float:none;
+ }
+ .clear{
+     clear: both;
+ }
+ .sf_search{
+     width: 100%!important;
+ }
+ #homePage.sloggato #search .sf_input{
+     border-radius: 32px;
+     font-size: 20px;
+     padding: 18px 20px 12px 65px;
+     width: 670px;
+     background-position: -740px -125px;
+
+ }
+ #homePage.sloggato #search .sf_input:focus{
+    border-radius: 32px;
+    font-size: 20px;
+    padding: 18px 20px 12px 65px;
+    width: 670px;
+    background-position: -740px -125px;
+    background-color: #099;
+ }
+.screen-reader-text{
+    display: none;}
+    .int.titolo{
+        color: #CCCCCC;
+        font-size: 70px;
+        line-height: 45px;
+        text-shadow:0 0 6px rgba(0, 0,0, 0.3);
+        margin-top: 6px;
+        display: block;
+}
+ </style>
+</head>
+<body class="sloggato" id="homePage">
+    <!-- 头部区域 -->
+   <div class="noise"></div>
+   <div id="topBar">
+       <div class="center">
+           <div class="topLeft">
+               <div class="center">
+                   <div class="topLeft">免费音乐，好听音乐，尽在音乐吧</div>
+                    <div id="categoryList"><span class="buttonList"></span>
+                     <ul>
+                         <!-- 第一个菜单项 -->
+                         <li>
+                           <a href="#">Blues<span class="count">20</span></a>
+                           <ul>
+                               <li>
+                                   <a href="#">Blues rock<span class="count">4</span> </a> 
+                               </li>
+                               <li>
+                                   <a href="#">Gospel<span class="count">1</span></a>  
+                               </li>
+                               <li>
+                                   <a href="#">Rhythm and blues<span class="count">14</span></a>  
+                               </li>
+                           
+                               <li>
+                                   <a href="#">Soul<span class="count">7</span> </a> 
+                               </li>
+                               </ul>
+                               </li>
+                               <!-- 第二个菜单项 -->
+                               <li>
+                                   <a href="#">Country<span class="count">20</span></a>
+                                   <ul>
+                                <li>
+                                   <a href="#">Blues rock<span class="count">4</span></a>  
+                                </li>
+                                <li>
+                                   <a href="#">Gospel<span class="count">1</span></a>
+                                </li>
+                               <li>
+                                   <a href="#">Rhythm and blues<span class="count">14</span></a>  
+                               </li>
+                                  <a href="#">Soul<span class="count">7</span></a> 
+                             </li>
+
+                           </ul>
+                         </li>
+                     </ul>
+                          
+                    </div>
+                   
+               </div>
+           </div>
+       </div>
+   </div>
+    <!-- 搜索框 -->
+    <div id="header" class="center">
+        <div class="int">
+            <h1 class="titolo">音乐</h1>
+        </div>
+
+        <div id="search">
+           <div class="sf_container" id=""clas="">
+              <form action="" method="">
+             <div>
+                 <label for="s" class="screen-reader-text">search for:</label>
+                 <div class="sf_search" style="width: 760px;border: 0px solid;">
+                   <span class="sf_block">
+                       <input class="sf_input" type="search" autocomplete="off" placeholder="输入搜索" />
+                   </span>
+
+                 </div>
+             </div>
+              </form>
+           </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div id="container" class="center">
+        <div id="content">
+            <div class="album200 animation post">
+     <span class="cdAlbum"></span>
+     <a class="coverAlbum" href="#">
+         <span class="patina"></span>
+         <img width="200" height="200" src="mypic5.jpg"
+         class="attachment-duecento wp_post_image"alt=""title="">
+     </a>
+     <h2 class="nameAlbum">
+     <a href="#" title="Link permanente Quiet Nights">
+         The wings of the physical</a>
+     </h2>
+     <span class="artistAlbum">
+    <a href="#" rel="tag">Angela Zhang</a>
+     </span>
+    </div>
+    <div id="container" class="center">
+        <div id="content">
+            <div class="album200 animation post">
+     <span class="cdAlbum"></span>
+     <a class="coverAlbum" href="#">
+         <span class="patina"></span>
+         <img width="200" height="200" src="mypic11.jpg"
+         class="attachment-duecento wp_post_image"alt=""title="">
+     </a>
+     <h2 class="nameAlbum">
+     <a href="#" title="Link permanente Quiet Nights">
+         The wings of the physical</a>
+     </h2>
+     <span class="artistAlbum">
+    <a href="#" rel="tag">Angela Zhang</a>
+     </span>
+    </div>
+    <div id="container" class="center">
+        <div id="content">
+            <div class="album200 animation post">
+     <span class="cdAlbum"></span>
+     <a class="coverAlbum" href="#">
+         <span class="patina"></span>
+         <img width="200" height="200" src="mypic16.jpg"
+         class="attachment-duecento wp_post_image"alt=""title="">
+     </a>
+     <h2 class="nameAlbum">
+     <a href="#" title="Link permanente Quiet Nights">
+         The wings of the physical</a>
+     </h2>
+     <span class="artistAlbum">
+    <a href="#" rel="tag">Angela Zhang</a>
+     </span>
+    </div>
+    <div id="container" class="center">
+        <div id="content">
+            <div class="album200 animation post">
+     <span class="cdAlbum"></span>
+     <a class="coverAlbum" href="#">
+         <span class="patina"></span>
+         <img width="200" height="200" src="mypic13.jpg"
+         class="attachment-duecento wp_post_image"alt=""title="">
+     </a>
+     <h2 class="nameAlbum">
+     <a href="#" title="Link permanente Quiet Nights">
+         The wings of the physical</a>
+     </h2>
+     <span class="artistAlbum">
+    <a href="#" rel="tag">Angela Zhang</a>
+     </span>
+                       <div style="clear:both;"></div>
+                       <div style="clear:both;"></div>
+                       <div style="clear:both;"></div>
+                    <a style="background:url(myfirst.png); height: 164px; width:69px; position: fixed; top: 150px;
+                    right: 0px;  z-index:10002"target="_blank" href="#"></a>
+                </div>
+               </div>
+</body>
+</html>
